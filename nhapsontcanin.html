@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = parseInt(prompt('Nhập số nguyên tố cần in')); /*thêm parseInt lồng vào prompt để chuyển từ số nguyên sang chuỗi*/
+    let count = 0
+    for (let i = 2; count <number ; i++ ){ /*đặt điều kiện cho for lớn*/
+        let check = true
+        for (let j = 2; j < i; j++){    /*vòng đầu tiên j=2 i=2 sẽ k chạy xuống for bé mà xuống check dưới cùng luôn */
+            if (i%j == 0){              /*nếu chia hết thì xuống check false */
+                check = false;          /*nếu k chia hết thì j sẽ +1 cho đến khi j=i thì sai điều kiện và xuống check dưới cùng*/
+                break;                  /*nếu break thì sẽ bỏ qua for bé đi xuống check dưới luôn */
+            }
+        }
+        if(check){                      /*nếu check = false thì k có giá trị gì và sẽ chạy lên for lớn */
+            document.write(i+",")       /*nếu check = true thì in ra số nguyên tố đó và xuống count++ */
+            count++                     /*sau khi đếm count++ xong thì sẽ vòng lên for lớn trên kia */
+        }
+    }                                   /*THÂN VÒNG LẶP IF K CÓ ELSE NẾU SAI THÌ SẼ CHẠY LÊN TRÊN LẠI VÀ LẶP LẠI*/
+</script>
