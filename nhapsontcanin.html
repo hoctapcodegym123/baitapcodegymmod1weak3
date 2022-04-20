@@ -13,7 +13,7 @@
     let count = 0
     for (let i = 2; count <number ; i++ ){ /*đặt điều kiện cho for lớn*/
         let check = true
-        for (let j = 2; j < i; j++){    /*vòng đầu tiên j=2 i=2 sẽ k chạy xuống for bé mà xuống check dưới cùng luôn */
+        for (let j = 2; j < i; j++){    /*vòng đầu tiên j=2 i=2 vẫn xuống for bé nhưng sai điều kiện nên xuống hẳn check dưới cùng */
             if (i%j == 0){              /*nếu chia hết thì xuống check false */
                 check = false;          /*nếu k chia hết thì j sẽ +1 cho đến khi j=i thì sai điều kiện và xuống check dưới cùng*/
                 break;                  /*nếu break thì sẽ bỏ qua for bé đi xuống check dưới luôn */

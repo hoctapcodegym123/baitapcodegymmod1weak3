@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="input" oninput="dichthuat()"/>
+    <p>Dịch ra là <span id="display"></span></p>
+</form>
+<script>
+    let a = ['','dog','cat','horse','pig','chicken','hamster','zebra','lion','monkey','cow'];
+    let b = ['','cờ hú','mèo','ngựa','heo','gà','chuột','ngựa vằn','sư tử','khỉ','bò'];
+    function dichthuat(){
+        let word = document.getElementById('input').value;
+        for (let i = 0;i < a.length; i++){
+            if (word === a[i]) document.getElementById('display').innerHTML=b[i]
+        }
+    }
+</script>
+</body>
+</html>
