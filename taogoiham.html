@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function processConfirm(cauhoi) {
+        let ketqua = "";
+        if (cauhoi) {
+            ketqua = "Excellent. We'll play a nice game of chess.";
+        } else {
+            ketqua = "Maybe later then.";
+        }
+        return ketqua;
+    }
+    let xacnhancauhoi = confirm("Shall we play a game?");
+    let cautraloi = processConfirm(xacnhancauhoi);
+    alert(cautraloi);
+
+</script>
+</body>
+</html>
